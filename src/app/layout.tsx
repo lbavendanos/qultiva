@@ -42,7 +42,6 @@ export default function RootLayout({
   return (
     <html lang={appLocale} className={inter.className}>
       <body className="flex min-h-screen flex-col bg-white text-zinc-800">
-        <header></header>
         <main className="grow">{children}</main>
       </body>
     </html>
