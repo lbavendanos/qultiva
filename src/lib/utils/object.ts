@@ -11,7 +11,7 @@
 export function objGet<T = any>(
   object: object,
   path?: string | string[],
-  defaultValue?: T
+  defaultValue?: T,
 ): T {
   if (!path) return object as T
 
