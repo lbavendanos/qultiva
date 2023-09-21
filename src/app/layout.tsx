@@ -1,6 +1,8 @@
 import { config } from '@/lib/utils/helpers'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
+import Link from 'next/link'
+import Container from '@/modules/common/components/Container'
 import './globals.css'
 
 const inter = Inter({
@@ -38,10 +40,40 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const appLocale = config<string>('app.locale')
+  const appName = config('app.name')
 
   return (
     <html lang={appLocale} className={inter.className}>
       <body className="flex min-h-screen flex-col bg-white text-zinc-800">
+        <Container as="header" className="p-4">
+          <section className="flex items-center justify-between">
+            <Link
+              href="/"
+              className="flex flex-col items-center justify-center"
+            >
+              <span className="text-3xl font-extrabold uppercase">
+                {appName}
+              </span>
+              <span className="text-sm font-medium uppercase">
+                Abono orgánico
+              </span>
+            </Link>
+            <nav className="flex gap-4">
+              <Link href="/" className="text-base">
+                Inicio
+              </Link>
+              <Link href="/" className="text-base">
+                Empresa
+              </Link>
+              <Link href="/" className="text-base">
+                Productos
+              </Link>
+              <Link href="/" className="text-base">
+                Contacto
+              </Link>
+            </nav>
+          </section>
+        </Container>
         <main className="grow">{children}</main>
       </body>
     </html>
