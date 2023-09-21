@@ -1,5 +1,7 @@
 import app from '@/config/app'
 import { objGet } from './object'
+import { twMerge } from 'tailwind-merge'
+import { type ClassValue, clsx } from 'clsx'
 
 /**
  * Gets the specified configuration value.
@@ -13,4 +15,6 @@ export function config<T = any>(path: string, defaultValue?: T): T {
   return objGet({ app }, path, defaultValue)
 }
 
-export { default as cn } from 'clsx'
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
