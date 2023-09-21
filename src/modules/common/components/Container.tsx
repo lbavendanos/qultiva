@@ -1,12 +1,14 @@
 import { cn } from '@/lib/utils/helpers'
 import React from 'react'
 
-export interface ContainerProps extends React.ComponentPropsWithRef<'div'> {}
+export interface ContainerProps extends React.ComponentPropsWithRef<'div'> {
+  as?: React.ElementType
+}
 
 const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
-  ({ className, ...props }, ref) => {
+  ({ as: Component = 'div', className, ...props }, ref) => {
     return (
-      <div
+      <Component
         {...props}
         ref={ref}
         className={cn('container mx-auto w-full max-w-7xl px-4', className)}
