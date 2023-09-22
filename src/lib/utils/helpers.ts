@@ -15,6 +15,12 @@ export function config<T = any>(path: string, defaultValue?: T): T {
   return objGet({ app }, path, defaultValue)
 }
 
-export function cn(...inputs: ClassValue[]) {
+/**
+ * A utility for constructing className strings conditionally.
+ *
+ * @param {ClassValue[]} inputs - The class names to add.
+ * @returns {string} Returns the resolved class names.
+ */
+export function cn(...inputs: ClassValue[]): string {
   return twMerge(clsx(inputs))
 }
