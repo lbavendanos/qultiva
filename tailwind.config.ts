@@ -3,6 +3,16 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+      screens: {
+        DEFAULT: '640px',
+        sm: '768px',
+        md: '1024px',
+        lg: '1280px',
+      },
+    },
     extend: {
       colors: {
         border: 'hsl(var(--border))',
@@ -46,16 +56,7 @@ const config: Config = {
       },
     },
   },
-  corePlugins: {
-    container: false,
-  },
-  plugins: [
-    require('tailwindcss-animate'),
-    require('tailwind-bootstrap-grid')({
-      gridGutterWidth: '2rem',
-      containerMaxWidths: { '2xl': '1280px' },
-    }),
-  ],
+  plugins: [require('tailwindcss-animate')],
 }
 
 export default config
