@@ -1,9 +1,9 @@
 import { config } from '@/lib/utils/helpers'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
-import RootLogo from './components/RootLogo'
-import RootNavbar from './components/RootNavbar'
-import RootNavbarMobileToggleButton from './components/RootNavbarMobileToggleButton'
+import RootNav from './components/root-nav'
+import RootLogo from './components/root-logo'
+import RootNavToggler from './components/root-nav-toggler'
 import './globals.css'
 
 const inter = Inter({
@@ -48,8 +48,8 @@ export default function RootLayout({
         <header className="container py-2">
           <section className="flex flex-wrap items-center justify-between">
             <RootLogo />
-            <RootNavbarMobileToggleButton />
-            <RootNavbar className="hidden lg:inline-block" />
+            <RootNavToggler />
+            <RootNav className="hidden lg:inline-block" />
           </section>
         </header>
         <main className="grow">{children}</main>

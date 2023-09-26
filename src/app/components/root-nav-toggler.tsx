@@ -5,10 +5,10 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@/modules/common/components/Sheet'
-import RootLogo from './RootLogo'
-import RootNavbar from './RootNavbar'
+import RootNav from './root-nav'
+import RootLogo from './root-logo'
 
-export default function RootNavbarMobileToggleButton() {
+export default function RootNavToggler() {
   return (
     <Sheet>
       <SheetTrigger
@@ -20,7 +20,7 @@ export default function RootNavbarMobileToggleButton() {
       <SheetContent>
         <SheetHeader>
           <RootLogo />
-          <RootNavbar
+          <RootNav
             className="flex flex-col text-center"
             linkClassName="hover:bg-transparent text-base"
           />

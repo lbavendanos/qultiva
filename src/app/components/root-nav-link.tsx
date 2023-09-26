@@ -1,15 +1,12 @@
 import { cn } from '@/lib/utils/helpers'
 import Link, { LinkProps } from 'next/link'
 
-export interface RootNavbarLinkProps extends LinkProps {
+export interface RootNavLinkProps extends LinkProps {
   children?: React.ReactNode
   className?: string
 }
 
-export default function RootNavbarLink({
-  className,
-  ...props
-}: RootNavbarLinkProps) {
+export default function RootNavLink({ className, ...props }: RootNavLinkProps) {
   return (
     <Link
       {...props}
