@@ -4,7 +4,7 @@ import {
   SheetHeader,
   SheetContent,
   SheetTrigger,
-} from '@/modules/common/components/Sheet'
+} from '@/components/ui/sheet'
 import RootNav from './root-nav'
 import RootLogo from './root-logo'
 
