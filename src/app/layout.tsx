@@ -1,8 +1,8 @@
 import { config } from '@/lib/utils/helpers'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
-import RootNav from './components/root-nav'
 import RootLogo from './components/root-logo'
+import RootNav from './components/root-nav'
 import RootNavToggler from './components/root-nav-toggler'
 import './globals.css'
 
@@ -46,10 +46,16 @@ export default function RootLayout({
     <html lang={appLocale} className={inter.className}>
       <body className="flex min-h-screen flex-col bg-background text-foreground">
         <header className="container py-2">
-          <section className="flex flex-wrap items-center justify-between">
-            <RootLogo />
-            <RootNavToggler />
-            <RootNav className="hidden lg:inline-block" />
+          <section className="grid grid-cols-12 items-center gap-6">
+            <div className="col-span-6 flex">
+              <RootLogo />
+            </div>
+            <div className="col-span-6 flex items-center justify-end lg:hidden">
+              <RootNavToggler />
+            </div>
+            <div className="col-span-6 hidden lg:flex lg:items-center lg:justify-end">
+              <RootNav variant="desktop" />
+            </div>
           </section>
         </header>
         <main className="grow">{children}</main>

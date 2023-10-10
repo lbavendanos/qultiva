@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils/helpers'
 import { MdMenu } from 'react-icons/md'
 import {
   Sheet,
@@ -8,23 +9,31 @@ import {
 import RootNav from './root-nav'
 import RootLogo from './root-logo'
 
-export default function RootNavToggler() {
+interface RootNavTogglerProps {
+  className?: string
+}
+
+export default function RootNavToggler({
+  className,
+  ...props
+}: RootNavTogglerProps) {
   return (
     <Sheet>
       <SheetTrigger
-        className="block hover:text-foreground/60 lg:hidden"
+        {...props}
+        className={cn(
+          'transition-colors duration-150 hover:text-foreground/60',
+          className,
+        )}
         aria-label="Open menu"
       >
         <MdMenu className="h-6 w-6" aria-hidden="true" />
       </SheetTrigger>
       <SheetContent>
-        <SheetHeader>
+        <SheetHeader className="mb-2">
           <RootLogo />
-          <RootNav
-            className="flex flex-col text-center"
-            linkClassName="hover:bg-transparent text-base"
-          />
         </SheetHeader>
+        <RootNav />
       </SheetContent>
     </Sheet>
   )

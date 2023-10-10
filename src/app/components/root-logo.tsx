@@ -1,11 +1,19 @@
-import { config } from '@/lib/utils/helpers'
+import { cn, config } from '@/lib/utils/helpers'
 import Link from 'next/link'
 
-export default function RootLogo() {
+interface RootLogoProps {
+  className?: string
+}
+
+export default function RootLogo({ className, ...props }: RootLogoProps) {
   const appName = config('app.name')
 
   return (
-    <Link href="/" className="flex flex-col items-center justify-center">
+    <Link
+      {...props}
+      href="/"
+      className={cn('flex flex-col items-center justify-center', className)}
+    >
       <span className="text-2xl font-extrabold uppercase lg:text-3xl">
         {appName}
       </span>
