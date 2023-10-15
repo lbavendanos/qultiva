@@ -47,13 +47,13 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col bg-background text-foreground">
         <header className="container py-2">
           <section className="grid grid-cols-12 items-center gap-6">
-            <div className="col-span-6 flex">
+            <div className="col-span-6 justify-self-start">
               <RootLogo />
             </div>
-            <div className="col-span-6 flex items-center justify-end lg:hidden">
+            <div className="col-span-6 block justify-self-end lg:hidden">
               <RootNavToggler />
             </div>
-            <div className="col-span-6 hidden lg:flex lg:items-center lg:justify-end">
+            <div className="col-span-6 hidden lg:block lg:justify-self-end">
               <RootNav variant="desktop" />
             </div>
           </section>
