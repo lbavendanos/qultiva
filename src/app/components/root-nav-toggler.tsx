@@ -22,15 +22,15 @@ export default function RootNavToggler({
       <SheetTrigger
         {...props}
         className={cn(
-          'transition-colors duration-150 hover:text-foreground/60',
+          'opacity-70 transition-opacity hover:opacity-100 disabled:pointer-events-none',
           className,
         )}
         aria-label="Open menu"
       >
         <MdMenu className="h-6 w-6" aria-hidden="true" />
       </SheetTrigger>
-      <SheetContent>
-        <SheetHeader className="mb-2">
+      <SheetContent closeLabel="Close menu" closeButton>
+        <SheetHeader className="mb-2 items-center">
           <RootLogo />
         </SheetHeader>
         <RootNav />
