@@ -12,14 +12,12 @@ export default function RootLogo({ className, ...props }: RootLogoProps) {
     <Link
       {...props}
       href="/"
-      className={cn('flex flex-col items-center justify-center', className)}
+      className={cn(
+        'flex flex-col items-center justify-center text-2xl font-bold lg:text-3xl',
+        className,
+      )}
     >
-      <span className="text-2xl font-extrabold uppercase lg:text-3xl">
-        {appName}
-      </span>
-      <span className="-mt-1 text-[0.7rem] font-medium uppercase lg:text-sm">
-        Abono orgánico
-      </span>
+      {appName}
     </Link>
   )
 }

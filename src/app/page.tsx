@@ -21,7 +21,7 @@ export default function Home() {
       <div className="container z-10 py-10">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 lg:col-span-5">
-            <div className="text-shadow flex flex-col gap-y-4 text-primary-foreground shadow-primary/50">
+            <div className="flex flex-col gap-y-4 text-primary-foreground shadow-primary/50 text-shadow">
               <h1 className="text-center text-5xl font-extrabold leading-none lg:text-left lg:text-6xl">
                 Potencia tu agricultura de forma sostenible
               </h1>

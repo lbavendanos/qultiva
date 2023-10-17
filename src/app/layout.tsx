@@ -45,7 +45,7 @@ export default function RootLayout({
   return (
     <html lang={appLocale} className={inter.className}>
       <body className="flex min-h-screen flex-col bg-background text-foreground">
-        <header className="container py-2">
+        <header className="container py-3">
           <section className="grid grid-cols-12 items-center gap-6">
             <div className="col-span-6 justify-self-start">
               <RootLogo />
