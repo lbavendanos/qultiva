@@ -7,7 +7,7 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 import RootNav from './root-nav'
-import RootLogo from './root-logo'
+import RootLogoLink from './root-logo-link'
 
 interface RootNavTogglerProps {
   className?: string
@@ -31,7 +31,7 @@ export default function RootNavToggler({
       </SheetTrigger>
       <SheetContent closeLabel="Close menu" closeButton>
         <SheetHeader className="mb-2 items-center">
-          <RootLogo />
+          <RootLogoLink />
         </SheetHeader>
         <RootNav />
       </SheetContent>

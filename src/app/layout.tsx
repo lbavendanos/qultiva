@@ -1,7 +1,7 @@
 import { config } from '@/lib/utils/helpers'
 import { Inter } from 'next/font/google'
 import { Metadata } from 'next'
-import RootLogo from './components/root-logo'
+import RootLogoLink from './components/root-logo-link'
 import RootNav from './components/root-nav'
 import RootNavToggler from './components/root-nav-toggler'
 import './globals.css'
@@ -48,7 +48,7 @@ export default function RootLayout({
         <header className="container py-3">
           <section className="grid grid-cols-12 items-center gap-6">
             <div className="col-span-6 justify-self-start">
-              <RootLogo />
+              <RootLogoLink />
             </div>
             <div className="col-span-6 block justify-self-end lg:hidden">
               <RootNavToggler />

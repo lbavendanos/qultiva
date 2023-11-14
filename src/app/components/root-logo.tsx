@@ -1,23 +1,27 @@
 import { cn, config } from '@/lib/utils/helpers'
-import Link from 'next/link'
 
-interface RootLogoProps {
-  className?: string
-}
+interface RootLogoProps extends React.SVGProps<SVGSVGElement> {}
 
 export default function RootLogo({ className, ...props }: RootLogoProps) {
   const appName = config('app.name')
 
   return (
-    <Link
+    <svg
       {...props}
-      href="/"
-      className={cn(
-        'flex flex-col items-center justify-center text-2xl font-bold lg:text-3xl',
-        className,
-      )}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 200 200"
+      fill="none"
+      className={cn('w-4', className)}
     >
-      {appName}
-    </Link>
+      <title>{appName}</title>
+      <rect width="200" height="200" rx="30" fill="#FF0028" />
+      <circle cx="100" cy="100" r="50" stroke="white" strokeWidth="20" />
+      <path
+        d="M100 100L148 148"
+        stroke="white"
+        strokeWidth="20"
+        strokeLinecap="round"
+      />
+    </svg>
   )
 }
