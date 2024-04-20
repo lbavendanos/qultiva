@@ -3,11 +3,19 @@ const config = {
   semi: false,
   singleQuote: true,
   plugins: [
-    "prettier-plugin-astro",
-    "prettier-plugin-svelte",
-    "prettier-plugin-tailwindcss",
+    'prettier-plugin-astro',
+    'prettier-plugin-svelte',
+    'prettier-plugin-tailwindcss',
   ],
-  tailwindFunctions: ["cn", "cva"],
-};
+  overrides: [
+    {
+      files: '*.astro',
+      options: {
+        parser: 'astro',
+      },
+    },
+  ],
+  tailwindFunctions: ['cn', 'cva'],
+}
 
-export default config;
+export default config
