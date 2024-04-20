@@ -18,5 +18,11 @@
     "tailwindcss": "^3.4.3",
     "typescript": "^5.4.5"
   },
-  "packageManager": "pnpm@8.14.1+sha512.856c4ecd97c5d3f30354ebc373cd32fb37274295c489db2d0f613a1e60f010cadfbb15036d525f3a06dec1897e4219b3c4f6d3be8f2f62fb0a366bee6aaa7533"
+  "packageManager": "pnpm@8.14.1+sha512.856c4ecd97c5d3f30354ebc373cd32fb37274295c489db2d0f613a1e60f010cadfbb15036d525f3a06dec1897e4219b3c4f6d3be8f2f62fb0a366bee6aaa7533",
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-svelte": "^3.2.3",
+    "prettier-plugin-tailwindcss": "^0.5.14"
+  }
 }
