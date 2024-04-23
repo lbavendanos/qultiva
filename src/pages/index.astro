@@ -1,11 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Header from '../components/Header.astro'
+import RootLayout from './../layouts/root/layout.astro'
+import Banner from '../components/Banner.astro'
 ---
 
-<Layout title="Qultiva">
-  <Header />
-  <main>
-    <h1>Qultiva</h1>
-  </main>
-</Layout>
+<RootLayout title="Qultiva">
+  <div class="flex flex-col">
+    <Banner />
+  </div>
+</RootLayout>
