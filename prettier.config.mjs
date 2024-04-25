@@ -15,7 +15,7 @@ const config = {
       },
     },
   ],
-  tailwindFunctions: ['cn', 'cva'],
+  tailwindFunctions: ['cn', 'tv'],
 }
 
 export default config
