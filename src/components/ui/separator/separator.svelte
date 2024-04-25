@@ -5,7 +5,7 @@
   const {
     orientation = 'horizontal',
     decorative = false,
-    class: className = '',
+    class: className,
     ...restProps
   }: SeparatorPrimitive.Props = $props()
 </script>
