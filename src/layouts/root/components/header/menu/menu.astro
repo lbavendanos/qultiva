@@ -1,11 +1,10 @@
 ---
 import MenuList from './menu-list.astro'
-import MenuSheet from './menu-sheet.svelte'
 ---
 
 <div class="flex items-center">
   <div class="flex lg:hidden">
-    <MenuSheet client:visible />
+    <!-- <MenuSheet client:visible /> -->
   </div>
   <div class="hidden lg:block">
     <MenuList />
