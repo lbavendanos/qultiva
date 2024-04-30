@@ -21,8 +21,8 @@ dependencies:
     specifier: ^4.7.0
     version: 4.7.0(typescript@5.4.5)
   bits-ui:
-    specifier: ^0.21.5
-    version: 0.21.5(svelte@5.0.0-next.110)
+    specifier: ^0.21.6
+    version: 0.21.6(svelte@5.0.0-next.110)
   clsx:
     specifier: ^2.1.1
     version: 2.1.1
@@ -1752,10 +1752,10 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /bits-ui@0.21.5(svelte@5.0.0-next.110):
-    resolution: {integrity: sha512-EDGHWkxnlcV2fbXn2tMps3SfpS7k6bfX3BrQ4s/h79jT6yprBS8DdDficlDK0SDHmPYHBZ0hSy4OgQUDodS/6w==}
+  /bits-ui@0.21.6(svelte@5.0.0-next.110):
+    resolution: {integrity: sha512-ZwFTFFE1WuuI/eHi6oGdLVi6niuUYsD+TvDHP+XceMoW68zHuOFWLoxbl9J+YS4LYq9JeXagXPmiB1+FcxeVDg==}
     peerDependencies:
-      svelte: ^4.0.0
+      svelte: ^4.0.0 || ^5.0.0-next.118
     dependencies:
       '@internationalized/date': 3.5.2
       '@melt-ui/svelte': 0.76.2(svelte@5.0.0-next.110)
