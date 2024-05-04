@@ -1,12 +1,25 @@
 ---
-import MenuList from './menu-list.astro'
+import MenuItem from './menu-item.astro'
 ---
 
-<div class="flex items-center">
-  <div class="flex lg:hidden">
-    <!-- <MenuSheet client:visible /> -->
-  </div>
-  <div class="hidden lg:block">
-    <MenuList />
-  </div>
-</div>
+<nav
+  id="navbar-sticky"
+  class="hidden w-full items-center justify-between md:flex md:w-auto"
+>
+  <ul
+    class="mt-4 flex flex-col rounded-lg border border-gray-100 bg-gray-50 p-4 md:mt-0 md:flex-row md:border-0 md:bg-white md:p-0"
+  >
+    <li>
+      <MenuItem href="/#home">Inicio</MenuItem>
+    </li>
+    <li>
+      <MenuItem href="/#products">Productos</MenuItem>
+    </li>
+    <li>
+      <MenuItem href="/#us">Nosotros</MenuItem>
+    </li>
+    <li>
+      <MenuItem href="/#contact">Contacto</MenuItem>
+    </li>
+  </ul>
+</nav>

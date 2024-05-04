@@ -4,10 +4,7 @@ const { href } = Astro.props
 
 <a
   href={href}
-  class:list={[
-    'text-sm no-underline',
-    'rounded-md px-3 py-2 transition-colors duration-150 hover:bg-accent hover:text-accent-foreground',
-  ]}
+  class="block rounded-md px-3 py-2 text-sm no-underline transition-colors duration-150 hover:bg-accent hover:text-accent-foreground"
 >
   <slot />
 </a>
