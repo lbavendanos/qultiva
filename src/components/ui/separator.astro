@@ -10,8 +10,6 @@ const {
   decorative = false,
   class: className,
 } = Astro.props
-
-const semanticProps = decorative ? { role: 'none' } : { role: 'separator' }
 ---
 
 <div
@@ -21,6 +19,6 @@ const semanticProps = decorative ? { role: 'none' } : { role: 'separator' }
     className,
   ]}
   data-orientation={orientation}
-  {...semanticProps as any}
+  role={decorative ? 'none' : 'separator'}
 >
 </div>
