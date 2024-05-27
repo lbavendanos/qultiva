@@ -1,9 +1,36 @@
 ---
+import Separator from '@/components/ui/separator.astro'
 import RootLayout from './../layouts/root/layout.astro'
 ---
 
-<RootLayout title="Qultiva">
-  <div class="flex flex-col">
-    <div class="h-64 w-full bg-accent"></div>
+<RootLayout>
+  <section class="container">
+    <div class="grid grid-cols-12 items-center gap-6">
+      <div
+        class="col-span-12 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-4"
+      >
+        <div class="my-12 md:my-14 lg:my-16 xl:my-20">
+          <div class="flex flex-col justify-center gap-y-5">
+            <h1
+              class="text-center text-4xl font-black tracking-tight md:text-5xl"
+            >
+              Abono orgánico de alta calidad para una agricultura sostenible
+            </h1>
+            <p
+              class="text-center text-base tracking-tight text-muted-foreground md:text-lg"
+            >
+              En Qultiva, ofrecemos abonos orgánicos diseñados para proporcionar
+              nutrientes esenciales de manera sostenible. Obtén cultivos más
+              fuertes y saludables mientras cuidas del medio ambiente con
+              nuestros productos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+    <Separator />
   </div>
+  <section></section>
 </RootLayout>
