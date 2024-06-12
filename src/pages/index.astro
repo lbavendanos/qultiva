@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets'
 import Separator from '@/components/ui/separator.astro'
 import RootLayout from './../layouts/root/layout.astro'
+import compostImage from '@/assets/compost.png'
 ---
 
 <RootLayout>
@@ -10,7 +12,7 @@ import RootLayout from './../layouts/root/layout.astro'
         class="col-span-12 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-4"
       >
         <div class="my-12 md:my-14 lg:my-16 xl:my-20">
-          <div class="flex flex-col justify-center gap-y-5">
+          <div class="flex flex-col justify-center gap-y-6">
             <h1
               class="text-center text-4xl font-black tracking-tight md:text-5xl"
             >
@@ -32,5 +34,28 @@ import RootLayout from './../layouts/root/layout.astro'
   <div class="container">
     <Separator />
   </div>
-  <section></section>
+  <section class="container my-12">
+    <div class="grid grid-cols-12 items-center gap-6">
+      <div class="col-span-12 md:col-span-6">
+        <div class="flex flex-col gap-y-6">
+          <h2 class="text-3xl font-black tracking-tight md:text-4xl">
+            Compost
+          </h2>
+          <p class="text-base tracking-tight text-muted-foreground md:text-lg">
+            El compost de Qultiva es un abono orgánico rico en nutrientes,
+            producido a partir de la descomposición de materia orgánica. Es
+            ideal para mejorar la estructura del suelo y aumentar su fertilidad.
+            Nuestro compost no solo proporciona nutrientes esenciales, sino que
+            también ayuda a retener la humedad y promueve la actividad
+            microbiana en el suelo.
+          </p>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-6">
+        <div class="flex items-center justify-center">
+          <Image src={compostImage} alt="Compost" width="500" height="500" />
+        </div>
+      </div>
+    </div>
+  </section>
 </RootLayout>
